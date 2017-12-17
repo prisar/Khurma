@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pritimays.khurma.MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Include other widget or layout tags here. These are considered
+                "child views" or "children" of the linear layout -->
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Latitude: " />
+
+        <TextView
+            android:id="@+id/textOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Latitude Goes Here" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Longitude: " />
+
+        <TextView
+            android:id="@+id/textOutput2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Longitude Goes Here" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
