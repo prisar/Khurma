@@ -6,43 +6,47 @@
     android:layout_height="match_parent"
     tools:context="com.example.pritimays.khurma.MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <!-- Include other widget or layout tags here. These are considered
-                "child views" or "children" of the linear layout -->
+        android:layout_margin="20dp">
 
         <TextView
+            android:id="@+id/txtBox1"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Latitude: " />
+            android:text="Latitude: "
+            android:textSize="22dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
 
         <TextView
             android:id="@+id/textOutput"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="Latitude Goes Here" />
+            android:layout_toRightOf="@id/txtBox1"
+            android:text="Latitude Goes Here"
+            android:textSize="22dp"/>
 
         <TextView
+            android:id="@+id/txtBox2"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Longitude: " />
+            android:layout_below="@id/textOutput"
+            android:text="Longitude: "
+            android:textSize="22dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
 
         <TextView
             android:id="@+id/textOutput2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="Longitude Goes Here" />
+            android:layout_below="@id/textOutput"
+            android:layout_toRightOf="@id/txtBox2"
+            android:text="Longitude Goes Here"
+            android:textSize="22dp"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

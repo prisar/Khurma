@@ -28,14 +28,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        txtOutput = (TextView) findViewById(R.id.textOutput);
+        txtOutput2 = (TextView) findViewById(R.id.textOutput2);
+
+        buildGoogleApiClient();
+    }
+
+    protected synchronized void buildGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
-
-        txtOutput = (TextView) findViewById(R.id.textOutput);
-        txtOutput2 = (TextView) findViewById(R.id.textOutput2);
     }
 
     @Override
@@ -62,7 +66,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     protected void onStop(){
 
         //Disconnect the client
-        mGoogleApiClient.disconnect();
+        if (mGoogleApiClient.isConnected()) {
+            mGoogleApiClient.disconnect();
+        }
 
         super.onStop();
     }
