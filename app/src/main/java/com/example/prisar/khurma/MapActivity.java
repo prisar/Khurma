@@ -8,8 +8,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -49,28 +52,47 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             .tilt(45)
             .build();
 
+
+    MarkerOptions renton;
+    MarkerOptions kirland;
+    MarkerOptions everett;
+    MarkerOptions lynnwood;
+    MarkerOptions montlake;
+    MarkerOptions kent;
+    MarkerOptions showare;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        Button btnSeattle = (Button) findViewById(R.id.btnSeattle);
-        btnSeattle.setOnClickListener((v) -> {
-            if(mapReady)
-                flyTo(SEATTLE);
-        });
+        renton = new MarkerOptions()
+                .position(new LatLng(47.489805, -122.120502))
+                .title("Renton");
 
-        Button btnTokyo = (Button) findViewById(R.id.btnTokyo);
-        btnTokyo.setOnClickListener((v) -> {
-            if(mapReady)
-                flyTo(TOKYO);
-        });
+        kirland = new MarkerOptions()
+                .position(new LatLng(47.7301986, -122.1768858))
+                .title("Kirland");
 
-        Button btnDublin = (Button) findViewById(R.id.btnDublin);
-        btnDublin.setOnClickListener((v) -> {
-            if(mapReady)
-                flyTo(DUBLIN);
-        });
+        everett = new MarkerOptions()
+                .position(new LatLng(47.978748, -122.202001))
+                .title("Everett");
+
+        lynnwood = new MarkerOptions()
+                .position(new LatLng(47.819533, -122.32288))
+                .title("Lynnwood");
+
+        montlake = new MarkerOptions()
+                .position(new LatLng(47.7973733, -122.3281771))
+                .title("Montlake Terrace");
+
+        kent = new MarkerOptions()
+                .position(new LatLng(47.385938, -122.258212))
+                .title("Kent Valley");
+
+        showare = new MarkerOptions()
+                .position(new LatLng(47.38702, -122.23986))
+                .title("Showare Center");
 
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.mapOutput);
@@ -81,8 +103,16 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mapReady = true;
         mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        flyTo(NEWYORK);
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        flyTo(SEATTLE);
+
+        mMap.addMarker(renton);
+        mMap.addMarker(kirland);
+        mMap.addMarker(everett);
+        mMap.addMarker(lynnwood);
+        mMap.addMarker(montlake);
+        mMap.addMarker(kent);
+        mMap.addMarker(showare);
     }
 
     public void flyTo(CameraPosition target) {
