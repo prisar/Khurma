@@ -1,5 +1,6 @@
 package com.example.prisar.khurma;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -93,14 +95,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         flyTo(SEATTLE);
 
-        mMap.addPolyline(new PolylineOptions().geodesic(true).add(renton)
-                .add(kirland)
-                .add(everett)
-                .add(lynnwood)
-                .add(montlake)
-                .add(kent)
-                .add(showare)
-                .add(renton));
+        mMap.addCircle(new CircleOptions()
+        .center(renton)
+        .radius(1000)
+        .fillColor(Color.RED)
+        .strokeColor(Color.RED));
     }
 
     public void flyTo(CameraPosition target) {
