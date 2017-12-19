@@ -50,10 +50,10 @@
         <Button
             android:id="@+id/mapButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@id/txtBox2"
-            android:layout_margin="96dp"
-            android:text="@string/maps_button"
+            android:layout_margin="38dp"
+            android:text="@string/streetview"
             android:textSize="25sp" />
 
     </RelativeLayout>

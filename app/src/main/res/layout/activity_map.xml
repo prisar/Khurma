@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/streetviewpanorama"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="1dp"
-    android:paddingRight="1dp"
-    android:paddingLeft="1dp"
-    android:paddingBottom="1dp"
-    tools:context="com.example.prisar.khurma.MapActivity">
-
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:map="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/mapOutput"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.google.android.gms.maps.MapFragment" />
-
-</android.support.constraint.ConstraintLayout>
+    android:name="com.google.android.gms.maps.StreetViewPanoramaFragment" />

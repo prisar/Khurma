@@ -14,4 +14,5 @@
     <string name="seattle">Seattle</string>
     <string name="tokyo">Tokyo</string>
     <string name="dublin">Dublin</string>
+    <string name="streetview">Street View</string>
 </resources>
