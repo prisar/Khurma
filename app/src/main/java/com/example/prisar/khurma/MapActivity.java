@@ -98,8 +98,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mMap.addCircle(new CircleOptions()
         .center(renton)
         .radius(1000)
-        .fillColor(Color.RED)
-        .strokeColor(Color.RED));
+        .fillColor(Color.argb(64, 0,255, 0))
+        .strokeColor(Color.GREEN));
     }
 
     public void flyTo(CameraPosition target) {
