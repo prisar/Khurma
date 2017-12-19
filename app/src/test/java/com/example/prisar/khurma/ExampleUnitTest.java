@@ -1,4 +1,4 @@
-package com.example.pritimays.khurma;
+package com.example.prisar.khurma;
 
 import org.junit.Test;
 

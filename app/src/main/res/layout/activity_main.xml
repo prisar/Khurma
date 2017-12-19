@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.pritimays.khurma.MainActivity">
+    tools:context="com.example.prisar.khurma.MainActivity">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
             android:layout_below="@id/txtBox2"
             android:layout_margin="96dp"
             android:text="@string/map_button"
-            android:textSize="30dp" />
+            android:textSize="25dp" />
 
     </RelativeLayout>
 

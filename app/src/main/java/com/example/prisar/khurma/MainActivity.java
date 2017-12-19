@@ -1,14 +1,12 @@
-package com.example.pritimays.khurma;
+package com.example.prisar.khurma;
 
 import android.content.Intent;
 import android.location.Location;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;

@@ -1,4 +1,4 @@
-package com.example.pritimays.khurma;
+package com.example.prisar.khurma;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

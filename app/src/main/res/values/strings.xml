@@ -6,5 +6,7 @@
     <string name="latitude_text">Latitude Goes Here</string>
     <string name="longitude_txt">Longitude: </string>
     <string name="longitude_text">Longitude Goes Here</string>
-    <string name="map_button">Map</string>
+    <string name="map_button">Maps</string>
+    <string name="satellite">Satellite</string>
+    <string name="hybrid">Hybrid</string>
 </resources>
