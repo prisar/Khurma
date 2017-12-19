@@ -1,11 +1,13 @@
 package com.example.pritimays.khurma;
 
+import android.content.Intent;
 import android.location.Location;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
     private LocationListener mLocationListener;
+    private Button mapButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         txtOutput2 = (TextView) findViewById(R.id.textOutput2);
 
         buildGoogleApiClient();
+
+        //map button init
+        init();
     }
 
     protected synchronized void buildGoogleApiClient() {
@@ -90,5 +96,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         Log.i(LOG_TAG, location.toString());
         txtOutput.setText(Double.toString(location.getLatitude()));
         txtOutput2.setText(Double.toString(location.getLongitude()));
+    }
+
+    public void init() {
+        mapButton = (Button) findViewById(R.id.mapButton);
+
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent map = new Intent(MainActivity.this, MapActivity.class);
+
+                startActivity(map);
+            }
+        });
     }
 }

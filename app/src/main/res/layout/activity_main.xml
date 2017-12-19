@@ -17,7 +17,7 @@
             android:id="@+id/txtBox1"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:text="Latitude: "
+            android:text="@string/latitude_txt"
             android:textSize="22dp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
 
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/txtBox1"
-            android:text="Latitude Goes Here"
+            android:text="@string/latitude_text"
             android:textSize="22dp"/>
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/textOutput"
-            android:text="Longitude: "
+            android:text="@string/longitude_txt"
             android:textSize="22dp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
 
@@ -44,8 +44,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/textOutput"
             android:layout_toRightOf="@id/txtBox2"
-            android:text="Longitude Goes Here"
+            android:text="@string/longitude_text"
             android:textSize="22dp"/>
+
+        <Button
+            android:id="@+id/mapButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBox2"
+            android:layout_margin="96dp"
+            android:text="@string/map_button"
+            android:textSize="30dp" />
 
     </RelativeLayout>
 

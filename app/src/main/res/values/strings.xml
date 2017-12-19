@@ -2,4 +2,9 @@
     <string name="app_name">Khurma</string>
     <string name="edit_message">Write here...</string>
     <string name="button_send">send</string>
+    <string name="latitude_txt">Latitude: </string>
+    <string name="latitude_text">Latitude Goes Here</string>
+    <string name="longitude_txt">Longitude: </string>
+    <string name="longitude_text">Longitude Goes Here</string>
+    <string name="map_button">Map</string>
 </resources>
