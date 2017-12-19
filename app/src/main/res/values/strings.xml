@@ -1,12 +1,17 @@
 <resources>
     <string name="app_name">Khurma</string>
-    <string name="edit_message">Write here...</string>
+    <string name="edit_message">Write here</string>
     <string name="button_send">send</string>
     <string name="latitude_txt">Latitude: </string>
     <string name="latitude_text">Latitude Goes Here</string>
     <string name="longitude_txt">Longitude: </string>
     <string name="longitude_text">Longitude Goes Here</string>
-    <string name="map_button">Maps</string>
+    <string name="maps_button">Maps</string>
+    <string name="map">Map</string>
     <string name="satellite">Satellite</string>
     <string name="hybrid">Hybrid</string>
+    <string name="new_york">New York</string>
+    <string name="seattle">Seattle</string>
+    <string name="tokyo">Tokyo</string>
+    <string name="dublin">Dublin</string>
 </resources>

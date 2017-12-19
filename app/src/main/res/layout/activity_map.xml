@@ -20,27 +20,24 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_height="wrap_content" >
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Map"
-                android:id="@+id/btnMap"
+                android:text="@string/seattle"
+                android:id="@+id/btnSeattle"
                 android:layout_weight="1" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/satellite"
-                android:id="@+id/btnSatellite"
+                android:text="@string/tokyo"
+                android:id="@+id/btnTokyo"
                 android:layout_weight="1" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hybrid"
-                android:id="@+id/btnHybrid"
+                android:text="@string/dublin"
+                android:id="@+id/btnDublin"
                 android:layout_weight="1" />
         </LinearLayout>
 
